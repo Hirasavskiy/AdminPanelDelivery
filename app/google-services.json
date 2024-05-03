@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "563987177115",
+    "project_id": "adminpaneldeliverydiplom",
+    "storage_bucket": "adminpaneldeliverydiplom.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563987177115:android:0de81d244d345361f3703e",
+        "android_client_info": {
+          "package_name": "com.example.adminpaneldelivery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdC4dlKeMAA9X9cg9YWEXpWVvE_YFHzQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
