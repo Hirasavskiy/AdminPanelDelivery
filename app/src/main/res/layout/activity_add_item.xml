@@ -47,7 +47,7 @@
                 app:layout_constraintTop_toTopOf="@+id/backBtn" />
 
             <EditText
-                android:id="@+id/enterFoodPrice"
+                android:id="@+id/foodPrice"
                 android:layout_width="match_parent"
                 android:layout_height="57dp"
                 android:layout_marginStart="8dp"
@@ -64,10 +64,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/enterFoodName" />
+                app:layout_constraintTop_toBottomOf="@+id/foodName" />
 
             <EditText
-                android:id="@+id/enterFoodName"
+                android:id="@+id/foodName"
                 android:layout_width="match_parent"
                 android:layout_height="57dp"
                 android:layout_marginStart="8dp"
@@ -86,7 +86,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/selectImage"
                 android:layout_width="match_parent"
                 android:layout_height="57dp"
                 android:layout_marginStart="8dp"
@@ -102,7 +102,7 @@
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/enterFoodPrice" />
+                app:layout_constraintTop_toBottomOf="@+id/foodPrice" />
 
 
             <androidx.cardview.widget.CardView
@@ -111,9 +111,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 app:cardCornerRadius="15dp"
-                app:layout_constraintEnd_toEndOf="@+id/textView16"
-                app:layout_constraintStart_toStartOf="@+id/textView16"
-                app:layout_constraintTop_toBottomOf="@+id/textView16">
+                app:layout_constraintEnd_toEndOf="@+id/selectImage"
+                app:layout_constraintStart_toStartOf="@+id/selectImage"
+                app:layout_constraintTop_toBottomOf="@+id/selectImage">
 
                 <ImageView
                     android:id="@+id/selectedImage"
@@ -135,7 +135,7 @@
                 android:fontFamily="@font/gnyrwn971"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
-                android:text="Краткое описание"
+                android:text="Состав"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -150,7 +150,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:background="@color/white"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis ante a dolor suscipit, et viverra ipsum tempor. Aliquam erat volutpat. Aenean pretium augue sapien, quis semper dui posuere quis."
+                android:hint="Добавьте описание"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView17" />
@@ -171,12 +171,12 @@
                 tools:layout_editor_absoluteX="0dp" />
 
             <EditText
-                android:id="@+id/ingridients"
+                android:id="@+id/ingredients"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="Молоко\n Сахар\n Арбуз\n Вафельный стаканчик"
+                android:hint="Ингредиенты"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
@@ -193,7 +193,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ingridients" />
+                app:layout_constraintTop_toBottomOf="@+id/ingredients" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
