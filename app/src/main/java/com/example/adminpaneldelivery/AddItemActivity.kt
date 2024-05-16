@@ -79,6 +79,7 @@ class AddItemActivity : AppCompatActivity() {
                     downloadUrl->
 
                     val newItem = AllProduct(
+                        newItemKey,
                         foodName = foodName,
                         foodPrice = foodPrice,
                         foodDescription = foodDescription,

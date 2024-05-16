@@ -1,15 +1,24 @@
 package com.example.adminpaneldelivery.adapter
 
 import android.content.Context
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.adminpaneldelivery.databinding.PendingOrderItemBinding
 
-class PendingOrderAdapter(private val customerNames:ArrayList<String>, private val quantity:ArrayList<String>,
-                          private val foodImage:ArrayList<Int>, private val context: Context): RecyclerView.Adapter<PendingOrderAdapter.PendingOrderViewHolder>() {
+class PendingOrderAdapter(private val context: Context, private val customerNames: MutableList<String>, private val quantity:MutableList<String>,
+                          private val foodImage: MutableList<String>,
+                          private val itemClicked: onItemClicked,
+): RecyclerView.Adapter<PendingOrderAdapter.PendingOrderViewHolder>() {
 
+interface onItemClicked{
+    fun onItemClickListener(position: Int)
+    fun onItemAcceptClickListener(position: Int)
+    fun onItemDispatchClickListener(positiom: Int)
+}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PendingOrderViewHolder {
         val binding = PendingOrderItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -29,7 +38,9 @@ class PendingOrderAdapter(private val customerNames:ArrayList<String>, private v
             binding.apply {
                 customerName.text = customerNames[position]
                 pendingOrder.text = quantity[position]
-                orderedFoodImage.setImageResource(foodImage[position])
+                var uriString = foodImage[position]
+                val uri = Uri.parse(uriString)
+                Glide.with(context).load(uri).into(orderedFoodImage)
                 orderAcceptBtn.apply {
                     if(!isAccepted){
                         text = "Принято"
@@ -42,13 +53,18 @@ class PendingOrderAdapter(private val customerNames:ArrayList<String>, private v
                             text = "Отправлено"
                             isAccepted = true
                             showToast("Заказ принят")
+                            itemClicked.onItemAcceptClickListener(position)
                         }
                         else{
                             customerNames.removeAt(adapterPosition)
                             notifyItemRemoved(adapterPosition)
                             showToast("Заказ отправлен")
+                            itemClicked.onItemDispatchClickListener(position)
                         }
                     }
+                }
+                itemView.setOnClickListener{
+                    itemClicked.onItemClickListener(position)
                 }
 
             }

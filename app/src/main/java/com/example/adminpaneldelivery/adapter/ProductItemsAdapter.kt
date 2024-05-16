@@ -13,7 +13,8 @@ import com.google.firebase.database.DatabaseReference
 class ProductItemsAdapter(
     private val context: Context,
     private val productList: ArrayList<AllProduct>,
-    databaseReference: DatabaseReference
+    databaseReference: DatabaseReference,
+    private val onDeleteClickListener:(position: Int) -> Unit
 ):
     RecyclerView.Adapter<ProductItemsAdapter.AddItemsViewHolder>() {
 
@@ -50,7 +51,7 @@ class ProductItemsAdapter(
                     increaseQuantity(position)
                 }
                 deleteBtn.setOnClickListener {
-                    deleteQuantity(position)
+                    onDeleteClickListener(position)
                 }
             }
         }

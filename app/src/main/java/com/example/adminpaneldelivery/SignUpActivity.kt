@@ -19,7 +19,7 @@ import com.google.firebase.database.database
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var userName: String
-    private lateinit var nameOfShop: String
+    private lateinit var address: String
     private lateinit var email: String
     private lateinit var password: String
     private lateinit var auth: FirebaseAuth
@@ -37,10 +37,10 @@ class SignUpActivity : AppCompatActivity() {
         binding.registrationBtn.setOnClickListener {
             //получаем текст из полей
             userName = binding.username.text.toString().trim()
-            nameOfShop = binding.nameOfShop.text.toString().trim()
+            address = binding.address.text.toString().trim()
             email = binding.email.text.toString().trim()
             password = binding.password.text.toString().trim()
-            if(userName.isBlank() || nameOfShop.isBlank() || email.isBlank() || password.isBlank()){
+            if(userName.isBlank() || address.isBlank() || email.isBlank() || password.isBlank()){
                 Toast.makeText(this, "Пожалуйста, заполните все поля", Toast.LENGTH_SHORT).show()
             }
             else{
@@ -84,10 +84,10 @@ class SignUpActivity : AppCompatActivity() {
     private fun saveUserData() {
         //получаем текст из полей
         userName = binding.username.text.toString().trim()
-        nameOfShop = binding.nameOfShop.text.toString().trim()
+        address = binding.address.text.toString().trim()
         email = binding.email.text.toString().trim()
         password = binding.password.text.toString().trim()
-        val user = UserModel(userName, nameOfShop, email, password)
+        val user = UserModel(userName, address, email, password)
         val userId = FirebaseAuth.getInstance().currentUser!!.uid
         //сохранение пользователя в базу данных
         database.child("user").child(userId).setValue(user)
