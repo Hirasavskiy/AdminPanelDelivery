@@ -59,7 +59,6 @@ class AdminProfileActivity : AppCompatActivity() {
         binding.name.isEnabled = isEnabled
         binding.address.isEnabled = isEnabled
         binding.email.isEnabled = isEnabled
-        binding.number.isEnabled = isEnabled
         binding.password.isEnabled = isEnabled
         binding.saveBtn.isEnabled = isEnabled
         if (isEnabled) {
