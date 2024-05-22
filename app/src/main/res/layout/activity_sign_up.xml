@@ -26,10 +26,10 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="350dp"
-        android:layout_height="87dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
         android:layout_marginTop="32dp"
-        android:src="@drawable/logo_new2"
+        android:src="@drawable/logo3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,41 +49,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_medium"
-        android:gravity="center"
-        android:text="Выберите местоположение"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
-        app:layout_constraintHorizontal_bias="0.132"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="57dp"
-        style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
-        app:endIconDrawable="@drawable/arrow_down"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="16dp"
+        app:endIconDrawable="@drawable/arrow_down"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
+
         <AutoCompleteTextView
             android:id="@+id/listOfLocation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="none"
             android:background="@color/white"
-            android:text="Выберите местоположение"/>
+            android:inputType="none"
+            android:text="Выберите местоположение" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <EditText
@@ -166,7 +154,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/roboto_medium"
+        android:fontFamily="@font/vetrino"
         android:gravity="center"
         android:text="Регистрация"
         android:textColor="@color/black"

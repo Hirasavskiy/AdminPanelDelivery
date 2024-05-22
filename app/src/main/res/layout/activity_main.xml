@@ -8,28 +8,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="123dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_new2" />
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:fontFamily="@font/gnyrwn971"
+        android:fontFamily="@font/vetrino"
         android:text="Панель администратора"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
@@ -48,7 +37,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#F4E8E8">
+            android:background="#77EDEDED">
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -79,7 +68,7 @@
                 android:layout_height="41dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
-                android:fontFamily="@font/gnyrwn971"
+                android:fontFamily="@font/vetrino"
                 android:text="Порядок\n ожидания"
                 android:textAlignment="center"
                 android:textColor="@color/black"
@@ -116,13 +105,13 @@
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="107dp"
-                android:layout_height="45dp"
+                android:layout_height="35dp"
                 android:layout_marginTop="8dp"
-                android:fontFamily="@font/gnyrwn971"
+                android:fontFamily="@font/vetrino"
                 android:text="Завершённые \n заказы"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toStartOf="@+id/textView8"
                 app:layout_constraintHorizontal_bias="0.466"
                 app:layout_constraintStart_toEndOf="@+id/pendingOrderText"
@@ -132,7 +121,7 @@
                 android:id="@+id/completeOrders"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
                 android:text="30"
                 android:textColor="#07CC00"
                 android:textSize="20sp"
@@ -159,10 +148,10 @@
                 android:layout_height="45dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
-                android:fontFamily="@font/gnyrwn971"
+                android:fontFamily="@font/vetrino"
                 android:text="Выручка"
                 android:textAlignment="center"
-                android:textColor="@color/startRedColor"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -188,7 +177,7 @@
             android:id="@+id/addMenu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#F4E8E8">
+            android:background="#77EDEDED">
 
             <ImageView
                 android:id="@+id/imageView6"
@@ -229,10 +218,10 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
 
-            android:layout_width="match_parent"
             android:id="@+id/allItems"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#F4E8E8">
+            android:background="#77EDEDED">
 
             <ImageView
                 android:id="@+id/imageView7"
@@ -272,7 +261,7 @@
             android:id="@+id/profile"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#F4E8E8">
+            android:background="#77EDEDED">
 
             <ImageView
                 android:id="@+id/imageView8"
@@ -314,7 +303,7 @@
             android:id="@+id/createUserBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#F4E8E8">
+            android:background="#77EDEDED">
 
             <ImageView
                 android:id="@+id/imageView9"
@@ -354,7 +343,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#F4E8E8">
+            android:background="#77EDEDED">
 
             <ImageView
                 android:id="@+id/imageView10"
@@ -395,7 +384,7 @@
             android:id="@+id/endBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#F4E8E8">
+            android:background="#77EDEDED">
 
             <ImageView
                 android:id="@+id/imageView11"

@@ -39,7 +39,7 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/gnyrwn971"
+                android:fontFamily="@font/vetrino"
                 android:paddingLeft="8dp"
                 android:text="Имя"
                 android:textSize="20sp" />
@@ -69,7 +69,7 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/gnyrwn971"
+                android:fontFamily="@font/vetrino"
                 android:paddingLeft="8dp"
                 android:text="Адрес"
                 android:textSize="20sp" />
@@ -100,7 +100,7 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/gnyrwn971"
+                android:fontFamily="@font/vetrino"
                 android:paddingLeft="8dp"
                 android:text="Тел."
                 android:textSize="20sp" />
@@ -130,7 +130,7 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/gnyrwn971"
+                android:fontFamily="@font/vetrino"
                 android:paddingLeft="8dp"
                 android:text="Сумма"
                 android:textSize="20sp" />
@@ -161,7 +161,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:fontFamily="@font/gnyrwn971"
+            android:fontFamily="@font/vetrino"
             android:text="Детали заказа"
             android:textSize="24sp" />
 

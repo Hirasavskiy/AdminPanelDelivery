@@ -45,11 +45,11 @@
 
             <TextView
                 android:id="@+id/nameItem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="149dp"
+                android:layout_height="33dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:fontFamily="@font/gnyrwn971"
+                android:fontFamily="@font/vetrino"
                 android:text="Мороженное ТОП арбуз"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toEndOf="@+id/cardView7"
@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="8dp"
-                android:fontFamily="@font/gnyrwn971"
+                android:fontFamily="@font/vetrino"
                 android:text="2 р."
                 android:textColor="@color/black"
                 android:textSize="20sp"
