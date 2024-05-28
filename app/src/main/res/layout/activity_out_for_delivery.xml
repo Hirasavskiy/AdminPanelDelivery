@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".OutForDeliveryActivity">
+
     <ImageView
         android:id="@+id/backBtn"
         android:layout_width="24dp"
@@ -27,7 +28,7 @@
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/backBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/backBtn" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

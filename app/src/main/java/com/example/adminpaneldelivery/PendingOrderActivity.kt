@@ -122,5 +122,8 @@ class PendingOrderActivity : AppCompatActivity(), PendingOrderAdapter.onItemClic
         val buyHistoryReference = database.reference.child("customer").child(userIdOfClickedItem!!).child("BuyHistory").child(pushKeyOfClickedItem!!)
         buyHistoryReference.child("orderAccepted").setValue(true)
         databaseOrderDetails.child(pushKeyOfClickedItem).child("orderAccepted").setValue(true)
+        val buyCompleteReference = database.reference.child("customer").child(userIdOfClickedItem!!).child("CompleteOrder").child(pushKeyOfClickedItem!!)
+        buyCompleteReference.child("orderAccepted").setValue(true)
+        databaseOrderDetails.child(pushKeyOfClickedItem).child("orderAccepted").setValue(true)
     }
 }

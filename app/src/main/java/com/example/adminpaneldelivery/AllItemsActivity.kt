@@ -75,17 +75,28 @@ class AllItemsActivity : AppCompatActivity() {
     }
 
     private fun deleteProductItems(position: Int) {
-        val productToDelete = productItems[position]
-        val productItemKey = productToDelete.key
-        val foodProductReference = database.reference.child("product").child(productItemKey!!)
-        foodProductReference.removeValue().addOnCompleteListener { task ->
-            if(task.isSuccessful){
-                productItems.removeAt(position)
-                binding.menuRecyclerView.adapter?.notifyItemRemoved(position)
+        if (position >= 0 && position < productItems.size) {
+            val productToDelete = productItems[position]
+            val productItemKey = productToDelete.key
+
+            if (productItemKey != null) { // Проверка на null перед использованием ключа
+                val foodProductReference = database.reference.child("product").child(productItemKey)
+                foodProductReference.removeValue().addOnCompleteListener { task ->
+                    if(task.isSuccessful){
+                        productItems.removeAt(position)
+                        binding.menuRecyclerView.adapter?.notifyItemRemoved(position)
+                    }
+                    else{
+                        Toast.makeText(this, "Ошибка удаления", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            } else {
+                Log.e("DeleteProductItems", "Ключ равен null")
             }
-            else{
-                Toast.makeText(this, "Ошибка удаления", Toast.LENGTH_SHORT).show()
-            }
+        } else {
+            Log.e("DeleteProductItems", "Попытка удаления элемента вне диапазона: position = $position")
         }
     }
+
+
 }

@@ -44,12 +44,6 @@ class ProductItemsAdapter(
                 Glide.with(context).load(uri).into(foodImageView)
                 quantityTextView.text = quantity.toString()
 
-                minusBtn.setOnClickListener {
-                    decreaseQuantity(position)
-                }
-                plusBtn.setOnClickListener {
-                    increaseQuantity(position)
-                }
                 deleteBtn.setOnClickListener {
                     onDeleteClickListener(position)
                 }
